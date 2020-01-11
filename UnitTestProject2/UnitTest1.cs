@@ -9,7 +9,6 @@ using System.Reflection;
 using System.Threading;
 
 
-
 namespace UnitTestProject2
 {
     [TestClass]
@@ -30,9 +29,19 @@ namespace UnitTestProject2
             var valueOfAd = new SelectElement(selectAd);
             valueOfAd.SelectByValue("Admiral");
             Thread.Sleep(3000);
-        
+            var selectAdC = _driver.FindElement(By.Id("Gridview1_ctl03_drpTitle"));
+            var valueOfCA = new SelectElement(selectAdC);
+            valueOfCA.SelectByValue("CA");
+            Thread.Sleep(3000);
+            var selectAdCS = _driver.FindElement(By.Id("Gridview1_ctl04_drpTitle"));
+            var valueOfAdCS = new SelectElement(selectAdCS);
+            valueOfAdCS.SelectByValue("CS");
+            Thread.Sleep(3000);
 
-          
+
+
+
+
         }
         [TestCleanup]
         public void CleanUp()
